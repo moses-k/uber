@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.uber.uber2"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        //android.ndkVersion  "your-installed-ndk-version"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //google firebase
+    implementation 'com.google.firebase:firebase-database:19.5.1'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.0'
+    implementation 'com.firebase:geofire-java:3.0.0'  //Geo fire
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.firebaseui:firebase-ui-database:6.4.0'
+    // FirebaseUI for Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
+
+
+    //added
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    //google map services
+    implementation 'com.google.android.gms:play-services-vision:20.1.2'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    //  implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+   //for AutocompleteSupportFragment( search palce)
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    //implementation 'com.google.android.libraries.places:places:2.0.0'
+
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation 'com.github.jd-alexander:library:1.1.0'  //For Routing listener
+    //google stuffs
+    //implementation 'com.google.android.gms:play-services-vision:20.1.2'
+    // implementation 'com.google.android.gms:play-services-location:17.1.0'
+    // implementation 'com.google.android.gms:play-services-places:9.2.0'
+    implementation 'com.github.jd-alexander:library:1.1.0'  //For Routing listener
+    implementation 'com.firebase:geofire-java:3.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'//Geo fir
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    implementation 'com.android.support:appcompat-v7:29.0.3'
+
+
+}
